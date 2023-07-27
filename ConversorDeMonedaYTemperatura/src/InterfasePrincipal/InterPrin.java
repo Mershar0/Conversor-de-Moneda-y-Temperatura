@@ -1,43 +1,60 @@
 package InterfasePrincipal;
 
-import java.awt.EventQueue;
+import javax.swing.*;
 
-import javax.swing.JFrame;
+import ConversorMoneda.convertOptMon;
+import ConversorTemperatura.convertOptTemp;
+
 
 public class InterPrin {
-
-	private JFrame frame;
-
-	/**
-	 * Launch the application.
-	 */
+	
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					InterPrin window = new InterPrin();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
+		
+		convertOptMon convertM = new convertOptMon();
+		convertOptTemp convertT = new convertOptTemp();
+		
+		while(true) {
+			String options = JOptionPane.showInputDialog(null, "Seleccione una opción de conversión", "Menú", JOptionPane.PLAIN_MESSAGE, 
+					null, new Object[] {"Conversor de Monedas", "Conversor de Temperatura"}, "Elegir").toString();
+			
+			
+			switch(options) {
+			case "Conversor de Monedas":
+				String input0 = JOptionPane.showInputDialog(null, "Ingrese el valor a convertir");
+				double receiveMValue = Double.parseDouble(input0);
+				convertM.ConvertMon(receiveMValue);
+				
+				int mAnswer = JOptionPane.showConfirmDialog(null, "¿Desea realizar otra conversión?");
+				if(JOptionPane.OK_OPTION == mAnswer) {
+					System.out.println("Entra");
+				} else {
+					JOptionPane.showMessageDialog(null, "Programa finalizado");
 				}
-			}
-		});
+				break;
+			
+			
+			case "Conversor de Temperatura":
+				String input1 = JOptionPane.showInputDialog(null, "Ingrese la temperatura a convertir");
+				double receiveTValue = Double.parseDouble(input1);
+				convertT.ConvertTemp(receiveTValue);
+				
+				int tAnswer = JOptionPane.showConfirmDialog(null, "¿Desea realizar otra conversión?");
+				if(JOptionPane.OK_OPTION == tAnswer) {
+					System.out.println("Entra");
+				} else {
+					JOptionPane.showMessageDialog(null, "Programa finalizado");
+				}
+				break;
+		}
+			
+		}
+		
+		
 	}
-
-	/**
-	 * Create the application.
-	 */
-	public InterPrin() {
-		initialize();
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
-
 }
+	
+	
+	
+
+
+
