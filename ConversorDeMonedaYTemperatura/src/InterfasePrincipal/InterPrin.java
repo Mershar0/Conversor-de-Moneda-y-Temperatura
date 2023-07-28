@@ -14,13 +14,13 @@ public class InterPrin {
 		convertOptTemp convertT = new convertOptTemp();
 		
 		while(true) {
-			String options = JOptionPane.showInputDialog(null, "Seleccione una opción de conversión", "Menú", JOptionPane.PLAIN_MESSAGE, 
+			String options = JOptionPane.showInputDialog(null, "Seleccione una opción de conversión", "Menú principal", JOptionPane.PLAIN_MESSAGE, 
 					null, new Object[] {"Conversor de Monedas", "Conversor de Temperatura"}, "Elegir").toString();
 			
 			
 			switch(options) {
 			case "Conversor de Monedas":
-				String input0 = JOptionPane.showInputDialog(null, "Ingrese el valor a convertir");
+				String input0 = JOptionPane.showInputDialog(null, "Ingrese la cantidad de dinero a convertir");
 				double receiveMValue = Double.parseDouble(input0);
 				convertM.ConvertMon(receiveMValue);
 				

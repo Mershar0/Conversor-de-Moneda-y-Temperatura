@@ -10,35 +10,35 @@ public class ConvertMon {
 	
 	public void pesosDom_dolar(double value) {
 		double monDolar = value / 55.96;
-		monDolar = (double)Math.round(monDolar * 1000) / 100;
+		monDolar = (double)Math.round(monDolar * 100d) / 100;
 		JOptionPane.showMessageDialog(null, "La cantidad corresponde a "
 				+ monDolar + " dólares.");
 	}
 	
 	public void pesosDom_euro(double value) {
 		double monEuro = value / 62.13;
-		monEuro = (double)Math.round(monEuro * 1000) / 100;
+		monEuro = (double)Math.round(monEuro * 100d) / 100;
 		JOptionPane.showMessageDialog(null, "La cantidad corresponde a "
 				+ monEuro + " euros.");
 	}
 	
 	public void pesosDom_libra(double value) {
 		double monLibra = value / 72.54;
-		monLibra = (double)Math.round(monLibra * 1000) / 100;
+		monLibra = (double)Math.round(monLibra * 100d) / 100;
 		JOptionPane.showMessageDialog(null, "La cantidad corresponde a "
 				+ monLibra + " libras esterlinas.");
 	}
 	
 	public void pesosDom_yen(double value) {
 		double monYen = value / 0.40;
-		monYen = (double)Math.round(monYen * 1000) / 100;
+		monYen = (double)Math.round(monYen * 100d) / 100;
 		JOptionPane.showMessageDialog(null, "La cantidad corresponde a "
 				+ monYen + " yen japonés.");
 	}
 	
 	public void pesosDom_won(double value) {
 		double monWon = value / 0.0438;
-		monWon = (double)Math.round(monWon * 1000) / 100;
+		monWon = (double)Math.round(monWon * 100d) / 100;
 		JOptionPane.showMessageDialog(null, "La cantidad corresponde a "
 				+ monWon + " won surcoreano.");
 	}

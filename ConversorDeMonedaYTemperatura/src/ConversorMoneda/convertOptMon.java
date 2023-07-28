@@ -16,9 +16,9 @@ ConvertMon monedas = new ConvertMon();
 					{"De Pesos Dominicanos a Dólar", "De Pesos Dominicanos a Euro", 
 					"De Pesos Dominicanos a Libras Esterlinas", 
 					"De Pesos Dominicanos a Yen Japonés", 
-					"De Pesos a Won surcoreano", "De Dólar a Pesos Dominicanos", 
+					"De Pesos Dominicanos a Won Surcoreano", "De Dólar a Pesos Dominicanos", 
 					"De Euro a Pesos Dominicanos", "De Libras Esterlinas a Pesos Dominicanos", 
-					"De Yen Japonés a Pesos Dominicanos", "De Won surcoreano a Pesos Dominicanos"}, 
+					"De Yen Japonés a Pesos Dominicanos", "De Won Surcoreano a Pesos Dominicanos"}, 
 					"Seleccion")).toString();
 	
 	switch (opt) {
@@ -38,7 +38,7 @@ ConvertMon monedas = new ConvertMon();
 		monedas.pesosDom_yen(value);
 		break;
 		
-	case "De Pesos Dominicanos a Won surcoreano":
+	case "De Pesos Dominicanos a Won Surcoreano":
 		monedas.pesosDom_won(value);
 		break;
 	
@@ -58,7 +58,7 @@ ConvertMon monedas = new ConvertMon();
 		monedas.yen_pesosDom(value);
 		break;
 		
-	case "De Won sub-coreano a Pesos Dominicanos":
+	case "De Won Surcoreano a Pesos Dominicanos":
 		monedas.won_pesosDom(value);
 		break;
 	}
