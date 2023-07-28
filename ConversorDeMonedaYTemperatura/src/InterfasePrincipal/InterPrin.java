@@ -61,10 +61,6 @@ public class InterPrin {
 			}
 		}
 		}
-					
-					
-			
-		
 	
 	
 	 public static boolean validNum(String input) {
